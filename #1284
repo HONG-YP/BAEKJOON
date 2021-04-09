@@ -1,0 +1,16 @@
+import sys
+
+while True:
+    blank = 0
+    N = list(sys.stdin.readline().strip())
+    if N[0] == '0':
+        break
+    for i in N:
+        if i == '1':
+            blank += 2
+        elif i == '0':
+            blank += 4
+        else:
+            blank += 3
+    blank += (len(N)+1)
+    print(blank)
